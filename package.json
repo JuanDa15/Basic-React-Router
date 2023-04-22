@@ -1,12 +1,21 @@
 {
   "name": "react-router-clone",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "main":"lib/index.js",
+  "module": "lib/index.js",
+  "exports": {
+    ".": {
+      "import":"./lib/index.js",
+      "require":"./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "prepare": "npx swc ./src/Router.jsx ./src/Route.jsx ./src/Link.jsx ./src/index.jsx -d lib",
     "test": "vitest",
     "test:ui": "vitest"
   },
@@ -16,6 +25,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.53",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
