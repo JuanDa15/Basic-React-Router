@@ -20,7 +20,9 @@
     "test:ui": "vitest"
   },
   "dependencies": {
-    "path-to-regexp": "6.2.1",
+    "path-to-regexp": "6.2.1"
+  },
+  "peerDependencies": {    
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
