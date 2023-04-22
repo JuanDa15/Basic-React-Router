@@ -15,7 +15,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "prepare": "npx swc ./src/Router.jsx ./src/Route.jsx ./src/Link.jsx ./src/index.jsx -d lib",
+    "prepare": "npx swc ./src/Router.jsx ./src/Route.jsx ./src/Link.jsx ./src/index.jsx  ./src/consts.js ./src/utils.js -d lib",
     "test": "vitest",
     "test:ui": "vitest"
   },
